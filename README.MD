@@ -23,3 +23,6 @@ https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
 ### 8) Create service-app.yaml
 https://kubernetes.io/docs/concepts/services-networking/service/
+
+### 9) Create ingress.yaml
+https://kubernetes.io/docs/concepts/services-networking/ingress/
