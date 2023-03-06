@@ -6,7 +6,7 @@ data:
   application.yaml: |
     spring:
       r2dbc:
-        url: r2dbc:postgres://db.java-middle.svc.cluster.local:5432/${POSTGRESQL_DATABASE}
+        url: r2dbc:postgres://db.sbercode-cec8f8a3-4995-425c-865d-4ebe887697ac-work.svc.cluster.local:5432/${POSTGRESQL_DATABASE}
         username: ${POSTGRESQL_USERNAME}
         password: ${POSTGRESQL_PASSWORD}
       jpa:
