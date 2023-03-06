@@ -9,5 +9,9 @@ https://kubernetes.io/docs/concepts/configuration/configmap/
 ### 3) Create config-app.yaml
 https://kubernetes.io/docs/concepts/configuration/configmap/
 
-### 3) Create config-init-db.yaml
+### 4) Create config-init-db.yaml
 https://kubernetes.io/docs/concepts/configuration/configmap/
+
+### 5) Create deployment-stateful-set.yaml
+https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+
