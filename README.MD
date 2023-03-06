@@ -18,4 +18,6 @@ https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 ### 6) Create service-db.yaml
 https://kubernetes.io/docs/concepts/services-networking/service/
 
+### 7) Create deployment-app.yaml
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 

@@ -25,9 +25,9 @@ spec:
               mountPath: /docker-entrypoint-initdb.d/
           envFrom:
             - configMapRef:
-              name: db-config
+                name: db-config
             - secretRef:
-              name: db-secret
+                name: db-secret
       volumes:
         - name: db-init-volume
           configMap:
