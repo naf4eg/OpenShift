@@ -1,0 +1,7 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: db-config
+data:
+  POSTGRESQL_USERNAME: addressbook
+  POSTGRESQL_DATABASE: addressbook_db
