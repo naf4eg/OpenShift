@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: switch
+spec:
+  selector:
+    app: switch-green
+  ports:
+    - name: switch-api
+      protocol: TCP
+      port: 9090
+      targetPort: http

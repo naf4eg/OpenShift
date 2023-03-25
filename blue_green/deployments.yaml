@@ -1,0 +1,79 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: switch-blue-deployment
+  labels: 
+    app: switch-blue-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: switch-blue
+  template:
+    metadata:
+      labels:
+        app: switch-blue
+    spec:
+      containers:
+        - name: switch-blue-cont
+          image: dzx912/switch:blue
+          ports:
+            - name: http
+              containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: http
+            failureThreshold: 100
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: http
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+
+---
+
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: switch-green-deployment
+  labels: 
+    app: switch-green-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: switch-green
+  template:
+    metadata:
+      labels:
+        app: switch-green
+    spec:
+      containers:
+        - name: switch-green-cont
+          image: dzx912/switch:green
+          ports:
+            - name: http
+              containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: http
+            failureThreshold: 100
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: http
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
